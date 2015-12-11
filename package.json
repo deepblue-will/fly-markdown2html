@@ -1,0 +1,42 @@
+{
+  "name": "fly-markdown2html",
+  "version": "0.0.1",
+  "description": "Markdown2html plugin for Fly.",
+  "license": "MIT",
+  "repository": "https://github.com/deepblue-will/fly-markdown2html",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "fly",
+    "fly-plugin",
+    "markdown2html"
+  ],
+  "scripts": {
+    "lint": "eslint *.js",
+    "setup": "npm i && npm test",
+    "spec": "npm run test | tspec",
+    "test": "npm run lint && npm run tape",
+    "build": "echo No build task specified.",
+    "deploy": "npm run test && git push origin master && npm publish",
+    "tape": "node --harmony --harmony_arrow_functions ./node_modules/tape/bin/tape test/*.js"
+  },
+  "author": {
+    "name": "deepblue-will",
+    "email": "deepblue.will@gmail.com",
+    "url": "http://github.com/deepblue-will"
+  },
+  "dependencies": {
+    "markdown-it": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^0.21.2",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "engines": {
+    "iojs": ">= 1.0.0",
+    "node": ">= 0.11.0"
+  }
+}
