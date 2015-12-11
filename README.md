@@ -4,7 +4,7 @@
   </a>
 </div>
 
-> [Markdown2html](https://github.com/deepblue-will/fly-markdown2html) plugin for _[Fly][fly]_.
+> [markdown2html](https://github.com/deepblue-will/fly-markdown2html) plugin for _[Fly][fly]_.
 
 [![][fly-badge]][fly]
 [![npm package][npm-ver-link]][releases]
@@ -13,7 +13,7 @@
 [![][mit-badge]][mit]
 
 ## Usage
-> Check out the [documentation](PLUGIN_DOCUMENTATION) to see the available options.
+> Check out the [documentation](https://github.com/markdown-it/markdown-it) to see the available options.
 
 ### Install
 
@@ -25,8 +25,11 @@ npm install -D fly-markdown2html
 
 ```js
 export default function* () {
-  yield ...
-}
+  yield this
+  .source('md/*.md')
+  .markdown2html({html: true})
+  .target('dist');
+};
 ```
 
 ## License

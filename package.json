@@ -1,7 +1,7 @@
 {
   "name": "fly-markdown2html",
   "version": "0.0.1",
-  "description": "Markdown2html plugin for Fly.",
+  "description": "Fly plugin to convert markdown to html.",
   "license": "MIT",
   "repository": "https://github.com/deepblue-will/fly-markdown2html",
   "main": "index.js",
@@ -38,5 +38,6 @@
   "engines": {
     "iojs": ">= 1.0.0",
     "node": ">= 0.11.0"
-  }
+  },
+  "private": true
 }
